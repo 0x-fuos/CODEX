@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arch Linux - A simple, lightweight distribution</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: #1793d1;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #1793d1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .news-item {
+            margin-bottom: 25px;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .columns {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A simple, lightweight distribution</h1>
+        <p>You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.</p>
+        <p>Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day.</p>
+        <p>Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch.</p>
+        <p><a href="#">Learn more...</a></p>
+    </header>
+
+    <hr>
+
+    <div class="columns">
+        <div class="column">
+            <section class="section">
+                <h2>Latest News</h2>
+                
+                <div class="news-item">
+                    <h3>Valkey to replace Redis in the [extra] Repository</h3>
+                    <div class="news-date">2025-04-17</div>
+                    <p>Valkey, a high-performance key/value datastore, will be replacing redis in the [extra] repository. This change is due to Redis modifying its license from BSD-3-Clause to RSALv2 and SSPLv2 on March 20th, 2024.</p>
+                    <p>Arch Linux Package Maintainers intend to support the availability of the redis package for roughly 14 days from the day of this post, to enable a smooth transition to valkey. After the 14 day transition period has ended, the redis package will be moved to the AUR. Also, from this point forward, the redis package will not receive any additional updates and should be considered depreciated until it is removed.</p>
+                    <p>Users are recommended to begin transitioning their use of Redis to Valkey as soon as possible to avoid possible complications after the 14 day transition window closes.</p>
+                </div>
+                
+                <div class="news-item">
+                    <h3>Cleaning up old repositories</h3>
+                    <div class="news-date">2025-02-17</div>
+                    <p>Around two years ago, we've merged the [community] repository into [extra] as part of the git migration. In order to not break user setups, we kept these repositories around in an unused and empty state. We're going to clean up these old repositories on <span class="bold">2025-03-01</span>.</p>
+                    <p>On systems where /etc/pacman.conf still references the old [community] repository, pacman -Sy will return an error on trying to sync repository metadata.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="column">
+            <section class="section">
+                <h2>Package Search:</h2>
+                <table>
+                    <tr>
+                        <th>Recent Updates (more)</th>
+                        <th>a</th>
+                    </tr>
+                    <tr>
+                        <td>python-sdkit-image 0.25.2-2</td>
+                        <td>x86_64</td>
+                    </tr>
+                    <tr>
+                        <td>python-intime 2025.3.30-3</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>passi 2025_05_03.5879@bc-1</td>
+                        <td>x86_64</td>
+                    </tr>
+                    <tr>
+                        <td>redmine 5.1.3-5</td>
+                        <td>x86_64</td>
+                    </tr>
+                    <tr>
+                        <td>python-poetry-core 2.1.3-1</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>simi 3.0.1-1</td>
+                        <td>x86_64</td>
+                    </tr>
+                    <tr>
+                        <td>python-imaged 2.37.0-3</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>ruby-protocol-rack 0.12.0-1</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>game-scope 3.16.4-1</td>
+                        <td>x86_64</td>
+                    </tr>
+                    <tr>
+                        <td>ruby-rise-compute 1.3.0-1</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>ruby-protocol-welbosdet 0.20.2-1</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>python-identity 2.6.10-1</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>ruby-protocol-trip 0.50.1-1</td>
+                        <td>any</td>
+                    </tr>
+                    <tr>
+                        <td>starfold 2.18.0-1</td>
+                        <td>x86_64</td>
+                    </tr>
+                    <tr>
+                        <td>tlint 0.57.0-1</td>
+                        <td>x86_64</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>Documentation</h2>
+                <table>
+                    <tr>
+                        <td>Wiki</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>Manual Pages</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Installation Guide</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>Community</h2>
+                <table>
+                    <tr>
+                        <td>Mining Lists</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>IEC Classable</td>
+                        <td>Sunday 04</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Arch Linux</p>
+    </footer>
+
+    <script>
+        // JavaScript for any interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add interactive functionality here
+            console.log('Arch Linux website loaded');
+            
+            // Example: Make all external links open in new tab
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                if (link.href && !link.href.startsWith(window.location.origin)) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
