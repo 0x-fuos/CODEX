@@ -3,290 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arch Linux - A simple, lightweight distribution</title>
-    <style>
-        /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1, h2, h3 {
-            color: #1793d1;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            font-size: 24px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-top: 30px;
-        }
-
-        h3 {
-            font-size: 16px;
-            margin-top: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        a {
-            color: #1793d1;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .news-item {
-            margin-bottom: 25px;
-        }
-
-        .news-date {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 8px 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f0f0f0;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #ddd;
-            margin: 30px 0;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .columns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .column {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 14px;
-            color: #666;
-        }
-
-        @media (max-width: 768px) {
-            .columns {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header/Navigation -->
     <header>
-        <h1>A simple, lightweight distribution</h1>
-        <p>You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.</p>
-        <p>Currently we have official packages optimized for the x86-64 architecture. We complement our official package sets with a community-operated package repository that grows in size and quality each and every day.</p>
-        <p>Our strong community is diverse and helpful, and we pride ourselves on the range of skillsets and uses for Arch that stem from it. Please check out our forums and mailing lists to get your feet wet. Also glance through our wiki if you want to learn more about Arch.</p>
-        <p><a href="#">Learn more...</a></p>
+        <div class="container">
+            <div class="logo">Your<span>Name</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <hr>
-
-    <div class="columns">
-        <div class="column">
-            <section class="section">
-                <h2>Latest News</h2>
-                
-                <div class="news-item">
-                    <h3>Valkey to replace Redis in the [extra] Repository</h3>
-                    <div class="news-date">2025-04-17</div>
-                    <p>Valkey, a high-performance key/value datastore, will be replacing redis in the [extra] repository. This change is due to Redis modifying its license from BSD-3-Clause to RSALv2 and SSPLv2 on March 20th, 2024.</p>
-                    <p>Arch Linux Package Maintainers intend to support the availability of the redis package for roughly 14 days from the day of this post, to enable a smooth transition to valkey. After the 14 day transition period has ended, the redis package will be moved to the AUR. Also, from this point forward, the redis package will not receive any additional updates and should be considered depreciated until it is removed.</p>
-                    <p>Users are recommended to begin transitioning their use of Redis to Valkey as soon as possible to avoid possible complications after the 14 day transition window closes.</p>
-                </div>
-                
-                <div class="news-item">
-                    <h3>Cleaning up old repositories</h3>
-                    <div class="news-date">2025-02-17</div>
-                    <p>Around two years ago, we've merged the [community] repository into [extra] as part of the git migration. In order to not break user setups, we kept these repositories around in an unused and empty state. We're going to clean up these old repositories on <span class="bold">2025-03-01</span>.</p>
-                    <p>On systems where /etc/pacman.conf still references the old [community] repository, pacman -Sy will return an error on trying to sync repository metadata.</p>
-                </div>
-            </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Your Name</span></h1>
+                <h2>Web Developer</h2>
+                <p>I create beautiful, functional websites that help businesses grow.</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400x400" alt="Your Name">
+            </div>
         </div>
+    </section>
 
-        <div class="column">
-            <section class="section">
-                <h2>Package Search:</h2>
-                <table>
-                    <tr>
-                        <th>Recent Updates (more)</th>
-                        <th>a</th>
-                    </tr>
-                    <tr>
-                        <td>python-sdkit-image 0.25.2-2</td>
-                        <td>x86_64</td>
-                    </tr>
-                    <tr>
-                        <td>python-intime 2025.3.30-3</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>passi 2025_05_03.5879@bc-1</td>
-                        <td>x86_64</td>
-                    </tr>
-                    <tr>
-                        <td>redmine 5.1.3-5</td>
-                        <td>x86_64</td>
-                    </tr>
-                    <tr>
-                        <td>python-poetry-core 2.1.3-1</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>simi 3.0.1-1</td>
-                        <td>x86_64</td>
-                    </tr>
-                    <tr>
-                        <td>python-imaged 2.37.0-3</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>ruby-protocol-rack 0.12.0-1</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>game-scope 3.16.4-1</td>
-                        <td>x86_64</td>
-                    </tr>
-                    <tr>
-                        <td>ruby-rise-compute 1.3.0-1</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>ruby-protocol-welbosdet 0.20.2-1</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>python-identity 2.6.10-1</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>ruby-protocol-trip 0.50.1-1</td>
-                        <td>any</td>
-                    </tr>
-                    <tr>
-                        <td>starfold 2.18.0-1</td>
-                        <td>x86_64</td>
-                    </tr>
-                    <tr>
-                        <td>tlint 0.57.0-1</td>
-                        <td>x86_64</td>
-                    </tr>
-                </table>
-            </section>
-
-            <section class="section">
-                <h2>Documentation</h2>
-                <table>
-                    <tr>
-                        <td>Wiki</td>
-                        <td>a</td>
-                    </tr>
-                    <tr>
-                        <td>Manual Pages</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Installation Guide</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </section>
-
-            <section class="section">
-                <h2>Community</h2>
-                <table>
-                    <tr>
-                        <td>Mining Lists</td>
-                        <td>a</td>
-                    </tr>
-                    <tr>
-                        <td>IEC Classable</td>
-                        <td>Sunday 04</td>
-                    </tr>
-                </table>
-            </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300x300" alt="About Me">
+                </div>
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>I'm a passionate web developer with 5 years of experience creating modern, responsive websites and web applications. I specialize in front-end development but also have experience with back-end technologies.</p>
+                    <p>When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span>Name:</span>
+                            <p>Your Name</p>
+                        </div>
+                        <div class="info-item">
+                            <span>Email:</span>
+                            <p>your.email@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <span>From:</span>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Download CV</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-content">
+                <div class="skills-text">
+                    <h3>What I Know</h3>
+                    <p>I've worked with a variety of technologies in the web development world. Here are the tools and technologies I'm most proficient with:</p>
+                </div>
+                <div class="skills-bars">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="html"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="css"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="javascript"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="react"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="node"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">My <span>Work</span></h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Website</h3>
+                        <p>Web Development</p>
+                        <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Mobile App</h3>
+                        <p>App Development</p>
+                        <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Logo Design</h3>
+                        <p>Graphic Design</p>
+                        <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 4">
+                    <div class="portfolio-overlay">
+                        <h3>Blog Website</h3>
+                        <p>Web Development</p>
+                        <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 5">
+                    <div class="portfolio-overlay">
+                        <h3>Task Manager</h3>
+                        <p>App Development</p>
+                        <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 6">
+                    <div class="portfolio-overlay">
+                        <h3>Brand Identity</h3>
+                        <p>Graphic Design</p>
+                        <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to me for any questions or opportunities!</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>your.email@example.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 234 567 890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Your City, Country</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Arch Linux</p>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Your Name. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        // JavaScript for any interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // You can add interactive functionality here
-            console.log('Arch Linux website loaded');
-            
-            // Example: Make all external links open in new tab
-            const links = document.querySelectorAll('a');
-            links.forEach(link => {
-                if (link.href && !link.href.startsWith(window.location.origin)) {
-                    link.setAttribute('target', '_blank');
-                    link.setAttribute('rel', 'noopener noreferrer');
-                }
-            });
-        });
-    </script>
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
 </body>
 </html>
